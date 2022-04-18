@@ -1,0 +1,30 @@
+Docker Commands
+
+1. Docker version -> docker --version
+2. Run a container -> docker run -p {HostPort}:{ContainerPort} -d {repository}:{versionTag}
+   -d = detached mode
+3. Get logs of a container -> docker logs {containerId}
+4. Get live logs of a container -> docker logs -f {containerId}
+5. Get the Containers which are running -> docker container ls
+6. Get all the containers irrespective of their state -> docker container ls -a 
+7. All the images which are present locally -> docker images 
+8. Stop a running container -> docker container stop {containerId}
+9. Add a tag to docker image -> docker tag {repository}:{oldTag} {repository}:{newTag}
+10. Pull an image -> docker pull {imageName}:{versionTag}
+11. Search an image -> docker search {imageName}
+12. History of an image -> docker image history {imageId}
+13. Details of an image -> docker image inspect {imageId}
+14. Remove image from local machine -> docker image remove {imageId}
+15. Pause a container -> docker container pause {containerId}
+16. Unpause a container -> docker container unpause {containerId}
+17. Details of a container -> docker container inspect {containerId}
+18. delete a stopped container -> docker container prune
+19. gracefully stop a container -> docker container stop {containerId}
+20. kill a container -> docker container kill {containerId}
+21. Run a container with restart policy -> docker run -p {HostPort}:{ContainerPort} -d --restart=always {repository}:{versionTag}
+22. Check what is happening in docker -> docker events
+23. What is the top process which is running in specific container -> docker top {containerId}
+24. All the stats regarding the containers which are running -> docker stats
+25. Run a container with specific memory and cpu -> docker run -p {HostPort}:{ContainerPort} -m 512m --cpu-quote 5000 -d --restart=always {repository}:{versionTag}
+here 100000 is equal to 100% of cpu
+26. Check what things does docker daemon manages -> docker system df

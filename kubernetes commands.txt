@@ -1,0 +1,9 @@
+kubernetes commands
+1. kubernetes controller version - kubectl version
+2. create kubernetes deployment - kubectl create deployment {deploymentName} --image={containerImage}:{containerVersion}
+3. expose deployment to outside world - kubectl expose deployment {deploymentName} --type=LoadBalancer --port={portNumber}
+4. get all the information about events happening inside kubernetes cluster - kubectl get events
+5. get all the pods that are created - kubectl get pods
+6. get all the replica sets that are created - kubectl get replicaset
+7. get all the services that are created - kubectl get service
+8. get information about a specific pod - kubectl describe pod {podName}
