@@ -7,3 +7,14 @@ kubernetes commands
 6. get all the replica sets that are created - kubectl get replicaset
 7. get all the services that are created - kubectl get service
 8. get information about a specific pod - kubectl describe pod {podName}
+9. scale deployment in kubernetes - kubectl scale deployment {deploymentName} --replicas={no of replicas you need}
+10. delete a pod - kubectl delete pod {podName}
+11. autoscaling in kubernetes - kubectl autoscale deployment {deploymentName} 
+--max={no of replicas you need} --cpu-percent={at what percentage of load you want your deployment to scale}
+12. edit deployment - kubectl edit deployment {deploymentName}
+13. change the image of deployment - kubectl set image deployment {deploymentName} {deploymentName}={imageURI}
+14. status of components in kubernetes - kubectl get componentstatuses
+15. get all the things that you have created - kubectl get all
+16. get deployment in yaml - kubectl get deployment {deploymentName} -o yaml >> {fileName}.yaml
+17. update the deployment - kubectl apply -f {deploymentName}
+18. delete specific things in kubernetes - kubectl delete all -l app={applicationName}
